@@ -9,7 +9,7 @@ st.set_page_config(page_title="Researcher Profile and STEM Data Explorer", layou
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["Researcher Profile", "Publications", "STEM Data Explorer", "Contact"],
+    ["Researcher Profile", "Publications", "Distribution Explorer", "Contact"],
 )
 
 # Dummy STEM data
@@ -81,9 +81,9 @@ elif menu == "Publications":
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
 
-elif menu == "STEM Data Explorer":
-    st.title("STEM Data Explorer")
-    st.sidebar.header("Data Selection")
+elif menu == "Distributions":
+    st.title("Distributions")
+    st.sidebar.header("Distribution Selection")
     
     # Tabbed view for STEM data
     data_option = st.sidebar.selectbox(
@@ -134,4 +134,5 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
