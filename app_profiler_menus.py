@@ -61,7 +61,7 @@ elif menu == "Publications":
         else:
             st.write("The CSV does not have a 'Year' column to visualize trends.")
 
-elif menu == "Distributions":
+elif menu == "Distribution Explorer":
     st.title("Distributions")
     st.sidebar.header("Distribution Selection")
     
@@ -86,6 +86,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
