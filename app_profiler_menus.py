@@ -43,10 +43,16 @@ elif menu == "Distribution Reconstructor":
     topology_options = [5000, 2500, 1000, 500, 300, 100, 50, 25, 10, 2]
     topology_list = st.multiselect("Select neuron layers in order (must end with 2):", topology_options, default = [300, 50, 2])
     st.write("Your list:", topology_list)
-    
+
+    selected_activations = st.session_state.get("selected", [])
+    def update_selection():
+        st.session_state.selected = selected
     activation_options = ["sigmoid", "ReLU", "purelin", "sin", "tanh"]
-    activation_list = st.multiselect("Select activation functions in order:", activation_options, default = ["sin", "sin", "purelin"])
+    max_choices = 3
+    activation_list = st.multiselect("Select activation functions in order:", activation_options, default = selected_activations, key = "multi_select", help = f"Pick up to {max_choices} items")
     st.write("Your list:", activation_list)
+    if len(activation_list) > max_choices:
+        st.warning(f"You can select at most {max_choices} items")
 
     batchsize = st.text_input("Select batchsize:", value = "fullbatch")
     resample_factor = st.number_input("After how many iterations do you want to resample the noise?:", value = 100)
@@ -58,7 +64,6 @@ elif menu == "Distribution Reconstructor":
 
     loss_options = ["SEL", "SEL+"]
     loss_list = st.multiselect("Select the loss type:", loss_options, default = "SEL+")
-    st.write("Your loss is set to:", loss_list)
 
 #if st.button("Run NN"):
     # Call the NN function
@@ -70,6 +75,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
