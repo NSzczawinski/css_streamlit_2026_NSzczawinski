@@ -1,5 +1,5 @@
 import streamlit as st
-from NN import NN
+
 
 # Set page title
 st.set_page_config(page_title = "Researcher Profile and Distribution Reconstructor", layout = "wide")
@@ -68,6 +68,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
