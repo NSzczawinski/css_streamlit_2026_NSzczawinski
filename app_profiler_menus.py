@@ -87,11 +87,11 @@ elif menu == "STEM Data Explorer":
     
     # Tabbed view for STEM data
     data_option = st.sidebar.selectbox(
-        "Choose a dataset to explore", 
-        ["Physics Experiments", "Astronomy Observations", "Weather Data"]
+        "Choose a distribution", 
+        ["Normal", "Gamma", "Normal Inverse Gaussian"]
     )
 
-    if data_option == "Physics Experiments":
+    if data_option == "Normal":
         st.write("### Physics Experiment Data")
         st.dataframe(physics_data)
         # Add widget to filter by Energy levels
@@ -102,7 +102,7 @@ elif menu == "STEM Data Explorer":
         st.write(f"Filtered Results for Energy Range {energy_filter}:")
         st.dataframe(filtered_physics)
 
-    elif data_option == "Astronomy Observations":
+    elif data_option == "Gamma":
         st.write("### Astronomy Observation Data")
         st.dataframe(astronomy_data)
         # Add widget to filter by Brightness
@@ -113,7 +113,7 @@ elif menu == "STEM Data Explorer":
         st.write(f"Filtered Results for Brightness Range {brightness_filter}:")
         st.dataframe(filtered_astronomy)
 
-    elif data_option == "Weather Data":
+    elif data_option == "Normal Inverse Gaussian":
         st.write("### Weather Data")
         st.dataframe(weather_data)
         # Add widgets to filter by temperature and humidity
@@ -134,3 +134,4 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
