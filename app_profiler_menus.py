@@ -36,14 +36,13 @@ elif menu == "Current Work":
 elif menu == "Distribution Reconstructor":
     st.title("Distribution Reconstructor")
     
-    random_seed= st.checkbox("Use a random seed?:", value = False)
+    random_seed= st.checkbox("Use a random seed?", value = False)
     samples_count = st.number_input("How many samples do you want to reconstruct?:", value = 5000)
     frequencies_count = st.number_input("How many samples of the characteristic function do you want to take?:", value = 100)
-    dimension = st.number_input("Dimension of the distribution:", value = 2)
     
     topology_options = [5000, 2500, 1000, 500, 300, 100, 50, 25, 10, 2]
-    topology_list = st.multiselect("Select neuron layers in order:", topology_options, default = [300, 50, 2])
-    st.write("Your list:", activation_list)
+    topology_list = st.multiselect("Select neuron layers in order (must end with 2):", topology_options, default = [300, 50, 2])
+    st.write("Your list:", topology_list)
     
     activation_options = ["sigmoid", "ReLU", "purelin", "sin", "tanh"]
     activation_list = st.multiselect("Select activation functions in order:", activation_options, default = ["sin", "sin", "purelin"])
@@ -68,6 +67,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
