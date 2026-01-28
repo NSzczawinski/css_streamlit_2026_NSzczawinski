@@ -50,11 +50,14 @@ elif menu == "Distribution Reconstructor":
 
     batchsize = st.text_input("Select batchsize:", value = "fullbatch")
     resample_factor = st.number_input("After how many iterations do you want to resample the noise?:", value = 100)
-    lr = st.number_input("Learn rate:", value = 0.001)
+    
+    lr_options = ["0.1", "0.01", "0.001", "0.0001", "0.00001"]
+    lr_list = st.multiselect("Select a learn rate:", lr_options, default = ["0.001"]
+    
     passes = st.number_input("How many iterations should the network complete?:", value = 10000)
 
     loss_options = ["SEL", "SEL+"]
-    loss_list = st.multiselect("Select the loss type:", loss_options, default = ["SEL+"])
+    loss_list = st.multiselect("Select the loss type:", loss_options, default = "SEL+")
     st.write("Your loss is set to:", loss_list)
 
 #if st.button("Run NN"):
@@ -67,6 +70,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
