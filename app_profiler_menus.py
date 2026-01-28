@@ -58,7 +58,7 @@ elif menu == "Distribution Reconstructor":
     loss_list = st.multiselect("Select the loss type:", loss_options, default = ["SEL+"])
     st.write("Your loss is set to:", loss_list)
 
-if st.button("Run NN"):
+#if st.button("Run NN"):
     # Call the NN function
     # result = NN(user_input)
     # st.success(f"The NN output is: {result}")
@@ -68,6 +68,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
