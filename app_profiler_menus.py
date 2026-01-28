@@ -1,9 +1,7 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
 
 # Set page title
-st.set_page_config(page_title = "Researcher Profile and Distribution Explorer", layout = "wide")
+st.set_page_config(page_title = "Researcher Profile and Distribution Reconstructor", layout = "wide")
 
 # Sidebar Menu
 st.sidebar.title("Navigation")
@@ -42,6 +40,7 @@ elif menu == "Contact":
     email = "jane.doe@example.com"
 
     st.write(f"You can reach me at {email}.")
+
 
 
 
