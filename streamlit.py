@@ -50,7 +50,7 @@ elif menu == "Distribution Reconstructor":
     # Start button
     if "running" not in st.session_state:
         st.session_state.running = False
-    if st.button("Start Demo (10 000 passes)"):
+    if st.button("Start Demo"):
         st.session_state.running = True
     
     # Placeholders for line graphs and plots
@@ -97,6 +97,7 @@ elif menu == "Contact":
     st.header("Contact Information")
     email = "jane.doe@example.com"
     st.write(f"You can reach me at {email}.")
+
 
 
 
