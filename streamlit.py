@@ -95,11 +95,14 @@ if menu == "Researcher Profile":
     # -------------------------------------------------------------------------------------------------------------
 
 elif menu == "Current Work":
+    # -------------------------------------------------------------------------------------------------------------
     st.title("Current Work")
+    st.pdf("streamlit_eg_1/MST Hons Research Project Nicholas Szczawinski 17s0395.pdf")
+    # -------------------------------------------------------------------------------------------------------------
 
 elif menu == "Distribution Reconstructor Demo":
-    st.title("Distribution Reconstructor Demo")
     # -------------------------------------------------------------------------------------------------------------
+    st.title("Distribution Reconstructor Demo")
     # Loss CSV
     df = pd.read_csv("streamlit_eg_1/loss_vector (mod 100).csv", header = None)
     df.columns = ["Loss value"]
@@ -153,6 +156,7 @@ elif menu == "Distribution Reconstructor Demo":
     
             time.sleep(0.4)
     # -------------------------------------------------------------------------------------------------------------
+
 
 
 
