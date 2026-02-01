@@ -5,7 +5,7 @@ from PIL import Image
 import os
 
 # Loss CSV
-df = pd.read_csv("loss_vector (mod 100).csv", header = None)
+df = pd.read_csv("streamlit_eg_1/loss_vector (mod 100).csv", header = None)
 df.columns = ["Loss value"]
 df.index.name = "Pass mod 100"
 
@@ -53,6 +53,7 @@ if st.session_state.running:
             Density_image = Image.open(Density_image_path)
             Density_image_placeholder.image(Density_image, caption = f"Density Function at Pass {i * factor}")
         time.sleep(0.1)
+
 
 
 
