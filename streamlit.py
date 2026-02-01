@@ -27,10 +27,6 @@ if menu == "Researcher Profile":
     st.write(f"**Name:** {name}")
     st.write(f"**Field of Research:** {field}")
     st.write(f"**Institution:** {institution}")
-    
-    st.image(
-    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
-    caption="Nature (Pixabay)"
         
     # Title and heading
     st.title("Researcher Profile")
@@ -107,7 +103,6 @@ if menu == "Researcher Profile":
         - Programming Languages: R, Python, MATLAB, Java
         - Contact: www.linkedin.com/in/nickszczawinski
         """)
-)
 
 elif menu == "Current Work":
     st.title("Current Work")
@@ -173,6 +168,7 @@ elif menu == "Contact":
     st.header("Contact Information")
     email = "jane.doe@example.com"
     st.write(f"You can reach me at {email}.")
+
 
 
 
