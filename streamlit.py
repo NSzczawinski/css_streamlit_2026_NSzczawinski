@@ -98,6 +98,7 @@ if menu == "Researcher Profile":
 elif menu == "Current Work":
     # -------------------------------------------------------------------------------------------------------------
     st.title("Current Work")
+    st.write("This work detailed the creation of a univariate distribution reconstructor in the R language. Distributions were reconstructed by training a primitive neural network to learn the characteristic function of the target distribution")
     with open("streamlit_eg_1/MST Hons Research Project Nicholas Szczawinski 17s0395.pdf", "rb") as file:
         base64_pdf = base64.b64encode(file.read()).decode("utf-8")
 
@@ -164,6 +165,7 @@ elif menu == "Distribution Reconstructor Demo":
     
             time.sleep(0.4)
     # -------------------------------------------------------------------------------------------------------------
+
 
 
 
