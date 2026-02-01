@@ -90,13 +90,14 @@ elif menu == "Distribution Reconstructor":
                 Density_image = Image.open(Density_image_path)
                 Density_image_placeholder.image(Density_image, caption = f"Density Function at Pass {i * factor}")
     
-            time.sleep(0.1)
+            time.sleep(1)
     # -------------------------------------------------------------------------------------------------------------
         
 elif menu == "Contact":
     st.header("Contact Information")
     email = "jane.doe@example.com"
     st.write(f"You can reach me at {email}.")
+
 
 
 
