@@ -11,11 +11,12 @@ st.set_page_config(page_title = "Nicholas Szczawinski Streamlit Profile", layout
 st.sidebar.title("Navigation")
 menu = st.sidebar.radio(
     "Go to:",
-    ["Researcher Profile", "Current Work", "Distribution Reconstructor", "Contact"],
+    ["Researcher Profile", "Current Work", "Distribution Reconstructor Demo"],
 )
 
 # Sections based on menu selection
 if menu == "Researcher Profile":
+    # -------------------------------------------------------------------------------------------------------------
     # Title and heading
     st.title("Researcher Profile")
     st.header("Nicholas Szczawinski")
@@ -91,19 +92,20 @@ if menu == "Researcher Profile":
         - Programming Languages: R, Python, MATLAB, Java
         - Contact: www.linkedin.com/in/nickszczawinski
         """)
+    # -------------------------------------------------------------------------------------------------------------
 
 elif menu == "Current Work":
     st.title("Current Work")
 
-elif menu == "Distribution Reconstructor":
-    st.title("Distribution Reconstructor")
+elif menu == "Distribution Reconstructor Demo":
+    st.title("Distribution Reconstructor Demo")
     # -------------------------------------------------------------------------------------------------------------
     # Loss CSV
     df = pd.read_csv("streamlit_eg_1/loss_vector (mod 100).csv", header = None)
     df.columns = ["Loss value"]
     df.index.name = "Pass mod 100"
     
-    st.header("Equally Weighted Bivariate Normal Mixture Distribution - Demo")
+    st.header("Equally Weighted Bivariate Normal Mixture Distribution")
     st.write("This is an example of how my neural network reconstructs a distribution by learning the characteristic function over 10 000 passes")
     
     # Start button
@@ -149,13 +151,9 @@ elif menu == "Distribution Reconstructor":
                 Density_image = Image.open(Density_image_path)
                 Density_image_placeholder.image(Density_image, caption = f"Density Function at Pass {i * factor}")
     
-            time.sleep(0.5)
+            time.sleep(0.4)
     # -------------------------------------------------------------------------------------------------------------
-        
-elif menu == "Contact":
-    st.header("Contact Information")
-    email = "jane.doe@example.com"
-    st.write(f"You can reach me at {email}.")
+
 
 
 
