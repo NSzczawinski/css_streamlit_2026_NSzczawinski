@@ -44,8 +44,10 @@ elif menu == "Distribution Reconstructor":
     df.columns = ["Loss value"]
     df.index.name = "Pass mod 100"
     
-    st.header("Equally Weighted Bivariate Normal Mixture Distribution")
+    st.header("Equally Weighted Bivariate Normal Mixture Distribution - Demo")
+    st.write("This is an example of how my neural network reconstructs a distribution by learning the characteristic function over 10 000 passes")
     
+    # Start button
     if "running" not in st.session_state:
         st.session_state.running = False
     if st.button("Start Demo (10 000 passes)"):
@@ -95,5 +97,6 @@ elif menu == "Contact":
     st.header("Contact Information")
     email = "jane.doe@example.com"
     st.write(f"You can reach me at {email}.")
+
 
 
