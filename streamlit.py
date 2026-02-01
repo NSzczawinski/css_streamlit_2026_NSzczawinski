@@ -5,7 +5,7 @@ from PIL import Image
 import os
 
 # Set page title
-st.set_page_config(page_title = "Researcher Profile", layout = "wide")
+st.set_page_config(page_title = "Nicholas Szczawinski Streamlit Profile", layout = "wide")
 
 # Sidebar Menu
 st.sidebar.title("Navigation")
@@ -31,6 +31,82 @@ if menu == "Researcher Profile":
     st.image(
     "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
     caption="Nature (Pixabay)"
+        
+    # Title and heading
+    st.title("Researcher Profile")
+    st.header("Nicholas Szczawinski")
+    st.write("Master's Student in Mathematical Statistics - Researching Bivariate Distribution Reconstruction via Neural Networks")
+    st.divider()
+    
+    # Column initialisation
+    column1, column2 = st.columns(2)
+    
+    # Left column content
+    with column1:
+        st.subheader("Education")
+        st.write("""
+        **MSc in Mathematical Statistics (Rhodes University : 2026)**\n
+        **Thesis:** Building a Multivariate Neural Network Sampler
+        """)
+        st.divider()
+        st.write("""
+        **BScH in Mathematical Statistics *With Distinction* (Rhodes University : 2025)**\n
+        **Research Project:** Building a Feed-forward Characteristic Function Matching Generator\n
+        **Awards:**\n
+        - Dean's List for Academic Merit
+        - Rhodes University Postgraduate Scholarship
+        - Rhodes University Foundation Scholarship
+        """)
+        st.divider()
+        st.write("""
+        **BSc (Rhodes University: 2022-2024) Triple Major:**\n
+          **Applied Mathematics** *With Distinction*\n
+          **Economics** *With Distinction*\n
+          **Mathematical Statistics** *With Distinction*\n
+        **Awards:**\n
+        - Dean's List for Academic Merit
+        - RL Threlfell Memorial Prize for best final year Economics student (2024)
+        - 1st place for Mathematical Statistics (2024)
+        - 2nd place for Mathematical Statistics (2023)
+        - Joint 5th place for Economics (2023)
+        - Top 10 Achievers List for Economics (2022)
+        - GRPGV Academic Award (2022, 2024)
+        - GRPGV Leadership Award (2022, 2024)
+        """)
+        st.divider()
+        st.write("""
+        **BSocScH in Organisational Psychology *With Distinction* (Rhodes University : 2021)**\n
+        **Research Project:** Organisational Cognitive Neuroscience and the Relevance of a Biologically-Based Interpretation of Organisational Phenomena\n
+        **Awards:**\n
+        - Rhodes University Postgraduate Scholarship
+        - Academic Colours
+        """)
+        st.divider()
+        st.write("""
+        **BSocSc (Rhodes University: 2022-2024) Double Major:**\n
+          **Organisational Psychology** *With Distinction*\n
+          **Industrial & Economic Sociology** *With Distinction*\n
+        **Awards:**\n
+        - Dean's List for Academic Merit
+        - Kimberley Hall Academic Award (2020)
+        - ABSA Bank Scholarship (2018, 2019, 2020)
+        """)
+        st.divider()
+        
+    # Right column content
+    with column2:
+        st.subheader("Research Interests")
+        st.write("""
+        - Statistical Learning and Neural Networks
+        - Probability Theory
+        - Numerical Methods for Sampling
+        """)
+        st.subheader("Details")
+        st.write("""
+        - Location: Makhanda/Grahamstown - Eastern Cape - South Africa 
+        - Programming Languages: R, Python, MATLAB, Java
+        - Contact: www.linkedin.com/in/nickszczawinski
+        """)
 )
 
 elif menu == "Current Work":
@@ -97,6 +173,7 @@ elif menu == "Contact":
     st.header("Contact Information")
     email = "jane.doe@example.com"
     st.write(f"You can reach me at {email}.")
+
 
 
 
