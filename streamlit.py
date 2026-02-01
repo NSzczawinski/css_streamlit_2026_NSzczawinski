@@ -3,6 +3,12 @@ import pandas as pd
 import time
 from PIL import Image
 import os
+import base64
+
+# Function to enable pdf in current work section
+def display_pdf(filepath):
+    with open(filepath, "rb") as file:
+        base64_pdf = base64.b64encode(file.read()).decode("utf-8")
 
 # Set page title
 st.set_page_config(page_title = "Nicholas Szczawinski Streamlit Profile", layout = "wide")
@@ -97,7 +103,16 @@ if menu == "Researcher Profile":
 elif menu == "Current Work":
     # -------------------------------------------------------------------------------------------------------------
     st.title("Current Work")
-    st.pdf("streamlit_eg_1/MST Hons Research Project Nicholas Szczawinski 17s0395.pdf")
+    pdf_display = f"""
+        <iframe
+            src = "data:application/pdf;base64,{base64_pdf}"
+            width = "100%"
+            height = "600">
+        </iframe>
+    """
+
+    st.markdown(pdf_display, unsafe_allow_html = True)
+    display_pdf("streamlit_eg_1/MST Hons Research Project Nicholas Szczawinski 17s0395.pdf")
     # -------------------------------------------------------------------------------------------------------------
 
 elif menu == "Distribution Reconstructor Demo":
@@ -156,6 +171,7 @@ elif menu == "Distribution Reconstructor Demo":
     
             time.sleep(0.4)
     # -------------------------------------------------------------------------------------------------------------
+
 
 
 
