@@ -3,6 +3,7 @@ import pandas as pd
 import time
 from PIL import Image
 import os
+import base64
 
 # Set page title
 st.set_page_config(page_title = "Nicholas Szczawinski Streamlit Profile", layout = "wide")
@@ -97,12 +98,13 @@ if menu == "Researcher Profile":
 elif menu == "Current Work":
     # -------------------------------------------------------------------------------------------------------------
     st.title("Current Work")
-    with open("streamlit_eg_1/MST Hons Research Project Nicholas Szczawinski 17s0395.pdf", "rb") as f:
-    st.download_button(
-        "📄 Download PDF",
-        f,
-        file_name="MST_Hons_Research_Project.pdf",
-        mime="application/pdf"
+    with open("streamlit_eg_1\MST Hons Research Project Nicholas Szczawinski 17s0395.pdf", "rb") as file:
+    base64_pdf = base64.b64encode(file.read()).decode("utf-8")
+
+    st.markdown(
+        f'<iframe src="data:application/pdf;base64,{base64_pdf}" '
+        'width="700" height="1000"></iframe>',
+        unsafe_allow_html=True,
     )
     # -------------------------------------------------------------------------------------------------------------
 
@@ -162,6 +164,7 @@ elif menu == "Distribution Reconstructor Demo":
     
             time.sleep(0.4)
     # -------------------------------------------------------------------------------------------------------------
+
 
 
 
