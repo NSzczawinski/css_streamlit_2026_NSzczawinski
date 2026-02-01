@@ -16,18 +16,6 @@ menu = st.sidebar.radio(
 
 # Sections based on menu selection
 if menu == "Researcher Profile":
-    st.title("Researcher Profile")
-
-    # Collect basic information
-    name = "Nicholas Szczawinski"
-    field = "Mathematical Statistics"
-    institution = "Rhodes University"
-
-    # Display basic profile information
-    st.write(f"**Name:** {name}")
-    st.write(f"**Field of Research:** {field}")
-    st.write(f"**Institution:** {institution}")
-        
     # Title and heading
     st.title("Researcher Profile")
     st.header("Nicholas Szczawinski")
@@ -168,6 +156,7 @@ elif menu == "Contact":
     st.header("Contact Information")
     email = "jane.doe@example.com"
     st.write(f"You can reach me at {email}.")
+
 
 
 
