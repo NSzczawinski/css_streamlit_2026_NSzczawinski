@@ -5,7 +5,7 @@ from PIL import Image
 import os
 
 # Loss CSV
-df = pd.read_csv("F:\\University\\MSC\\Neural Network\\streamlit_eg_1\\loss_vector (mod 100).csv", header = None)
+df = pd.read_csv("loss_vector (mod 100).csv", header = None)
 df.columns = ["Loss value"]
 df.index.name = "Pass mod 100"
 
@@ -33,23 +33,24 @@ if st.session_state.running:
         if i == 1:
             factor = 1
             ith_CF_image = f"CF_plots_{i * factor}.png"
-            CF_image_path = os.path.join("F:\\University\\MSC\\Neural Network\\streamlit_eg_1\\CF_images", ith_CF_image)
+            CF_image_path = os.path.join("streamlit_eg_1\\CF_images", ith_CF_image)
             CF_image = Image.open(CF_image_path)
             CF_image_placeholder.image(CF_image, caption = f"Characteristic Function at Pass {i * factor}")
             
             ith_Density_image = f"Density_plot_{i * factor}.png"
-            Density_image_path = os.path.join("F:\\University\\MSC\\Neural Network\\streamlit_eg_1\\Density_images", ith_Density_image)
+            Density_image_path = os.path.join("streamlit_eg_1\\Density_images", ith_Density_image)
             Density_image = Image.open(Density_image_path)
             Density_image_placeholder.image(Density_image, caption = f"Density Function at Pass {i * factor}")
         elif i % 10 == 0:
             factor = 100
             ith_CF_image = f"CF_plots_{i * factor}.png"
-            CF_image_path = os.path.join("F:\\University\\MSC\\Neural Network\\streamlit_eg_1\\CF_images", ith_CF_image)
+            CF_image_path = os.path.join("streamlit_eg_1\\CF_images", ith_CF_image)
             CF_image = Image.open(CF_image_path)
             CF_image_placeholder.image(CF_image, caption = f"Characteristic Function at Pass {i * factor}")
             
             ith_Density_image = f"Density_plot_{i * factor}.png"
-            Density_image_path = os.path.join("F:\\University\\MSC\\Neural Network\\streamlit_eg_1\\Density_images", ith_Density_image)
+            Density_image_path = os.path.join("streamlit_eg_1\\Density_images", ith_Density_image)
             Density_image = Image.open(Density_image_path)
             Density_image_placeholder.image(Density_image, caption = f"Density Function at Pass {i * factor}")
+
         time.sleep(0.1)
