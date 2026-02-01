@@ -89,6 +89,7 @@ if menu == "Researcher Profile":
         """)
         st.subheader("Details")
         st.write("""
+        - Institution: Rhodes University
         - Location: Makhanda/Grahamstown - Eastern Cape - South Africa 
         - Programming Languages: R, Python, MATLAB, Java
         - Contact: www.linkedin.com/in/nickszczawinski
@@ -169,6 +170,7 @@ elif menu == "Distribution Reconstructor Demo":
     
             time.sleep(0.4)
     # -------------------------------------------------------------------------------------------------------------
+
 
 
 
